@@ -1,4 +1,4 @@
-view: inventory_items {
+view: inventory_items_core {
   sql_table_name: demo_db.inventory_items ;;
 
   dimension: id {

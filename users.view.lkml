@@ -1,4 +1,4 @@
-view: users {
+view: users_core {
   sql_table_name: demo_db.users ;;
 
   dimension: id {

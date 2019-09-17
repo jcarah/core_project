@@ -1,27 +1,28 @@
 include: "*.view.lkml"
+
 explore: order_items_core {
-  from: order_items
-  join: orders {
+#   extension: required
+  join: orders_core {
     type: left_outer
-    sql_on: ${order_items_core.order_id} = ${orders.id} ;;
+    sql_on: ${order_items_core.order_id} = ${orders_core.id} ;;
     relationship: many_to_one
   }
 
-  join: inventory_items {
+  join: inventory_items_core {
     type: left_outer
-    sql_on: ${order_items_core.inventory_item_id} = ${inventory_items.id} ;;
+    sql_on: ${order_items_core.inventory_item_id} = ${inventory_items_core.id} ;;
     relationship: many_to_one
   }
 
-  join: users {
+  join: users_core {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders_core.user_id} = ${users_core.id} ;;
     relationship: many_to_one
   }
 
-  join: products {
+  join: products_core {
     type: left_outer
-    sql_on: ${inventory_items.product_id} = ${products.id} ;;
+    sql_on: ${inventory_items_core.product_id} = ${products_core.id} ;;
     relationship: many_to_one
   }
 }
