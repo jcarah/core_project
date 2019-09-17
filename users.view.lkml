@@ -39,7 +39,7 @@ view: users_core {
 
   dimension: email {
     type: string
-    sql: ${TABLE}.email ;;
+    sql: 'foo' ;;
   }
 
   dimension: first_name {
