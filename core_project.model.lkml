@@ -10,6 +10,8 @@ datagroup: core_project_default_datagroup {
 
 persist_with: core_project_default_datagroup
 
+explore: order_items_core {}
+
 # explore: connection_reg_r3 {}
 #
 # explore: derived_test_table_3_20190510 {}
